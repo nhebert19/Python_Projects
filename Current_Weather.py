@@ -12,7 +12,7 @@ def weather_app():
         reverse_geocode_data = {
             'q': zip_info,
             'limit': 1,
-            'appid': '2312727bd558e732d4033cef3b76a40d'
+            'appid': #INSERT API KEY HERE
         }
         location = requests.get('http://api.openweathermap.org/geo/1.0/direct', params=reverse_geocode_data)
         print(location.json())
@@ -20,7 +20,7 @@ def weather_app():
             'lat': location.json()[0]['lat'],
             'lon': location.json()[0]['lon'],
             'units': units,
-            'appid': '2312727bd558e732d4033cef3b76a40d'
+            'appid': #INSERT API KEY HERE
         }
         response = requests.get('https://api.openweathermap.org/data/2.5/weather', params=data)
         weather = response.json()['weather']
@@ -53,7 +53,7 @@ def weather_app():
         reverse_geocode_data = {
             'q': zip_info,
             'limit': 1,
-            'appid': '2312727bd558e732d4033cef3b76a40d'
+            'appid': #INSERT API KEY HERE
         }
         location = requests.get('http://api.openweathermap.org/geo/1.0/direct', params=reverse_geocode_data)
         print(location.json())
@@ -61,7 +61,7 @@ def weather_app():
             'lat': location.json()[0]['lat'],
             'lon': location.json()[0]['lon'],
             'units': units,
-            'appid': '2312727bd558e732d4033cef3b76a40d'
+            'appid': #INSERT API KEY HERE
         }
         response = requests.get('https://api.openweathermap.org/data/2.5/weather', params=data)
         weather = response.json()['weather']
